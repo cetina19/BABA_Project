@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-  
+        scale=1">
+        <link rel="stylesheet" 
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-
+        awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="/static/styles/searchBar.css">
+    </head>
+    <body>
+        <h1><center>Library</center></h1>
+        <form class="example" method="post" action="" style="margin:auto;max-width:600px">
+            <input type="text" placeholder="Search by author or book, or all to see all the data" name="book">
+            <button type="submit"><p>Arama</p></button>
+        </form>
+        <p></p>
+        <center>
+        {% for item in data %}
+            <tr>
+                <td> <div class="name">{{item[0]}} *** {{item[1]}} &&&</div></td>
+                <td><form action="" class ="" method="POST" name="book"><button type="submit" name ="download_button" value = {{item[3]}} >Download</button></form></td>
+                </br>
+            </tr>
+        {% endfor %}
+        </center>
+    </body>
+</html>

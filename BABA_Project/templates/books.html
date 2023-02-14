@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <h1>Books That Are Loaded To The Website</h1>
+        <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='/styles/books.css') }}">
+        <script src="search.js" defer></script>
+    </head>
+    <body>
+        <table border = 1, class="content_table">
+            <thead>
+                <tr>
+                    <th>Author</th>
+                    <th>Description</th>
+                    <th>Link</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for book in book_list %}
+                <tr>
+                    <td> {{book[0]}} </td>
+                    <td> {{book[1]}} </td>
+                    <td> <form action="" class ="" method="POST"><button type="submit" name ="download_button" value = {{book[3]}} >Download</button></form> </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </body>
+</html>

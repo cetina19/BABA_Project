@@ -1,0 +1,14 @@
+<table border = 1>
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Password</th>
+    </tr>
+    {% for user in userDetails %}
+    <tr>
+        <td> {{user[0]}} </td>
+        <td> {{user[1]}} </td>
+        <td> {{user[2]}} </td>
+    </tr>
+    {% endfor %}
+</table>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="/static/styles/searchBar.css">
+    </head>
+    <body>
+        <h1><center>Library</center></h1>
+        <!-- <form class="example" method="post" action="" style="margin:auto;max-width:600px">
+            <input type="text" placeholder="Enter a book" name="book">
+            <input type="text" placeholder="Enter an author" name="author">
+		    </br>
+            <button type="submit" <i>Insert</i></button>
+        </form> -->
+
+
+        <form class="example", method='POST', enctype="multipart/form-data", id='Upload'>
+            <input type="text" placeholder="Enter Author Name" name="author" minlength="1" maxlength="20" required id="Author"/>
+            <input type="text" placeholder="Enter Book Name" name="book_name" minlength="1" maxlength="20" required id="BookName"/>
+            
+            <div style="text-align: center">
+                <br>
+                {{  form.hidden_tag()  }}
+                {{  form.csrf_token }}
+                {{  form.file()  }}
+            </div>
+            
+            <!--{{  form.submit()  }}-->
+            <button type="submit" class="fileSelect"> <i>Insert</i></button>
+            <!-- <submit name="form2"/> 
+             <input type="submit" class="sm" value="button1" name="Submit"/> -->
+        </form>
+    </body>
+</html> 

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-  
+        scale=1">
+        <link rel="stylesheet" 
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-
+        awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="/static/styles/searchBar.css">
+    </head>
+    <body>
+        <section>
+        <h1><center>Library</center></h1>
+        <form class="example" method="post" action="" style="margin:auto;max-width:600px">
+            <center>
+                <input type="text" placeholder="Search by author or book, or all to see all the data" name="book">
+                <button type="submit"><p>Arama</p></button>
+            </center>
+        </form>
+        <p></p>
+        <center>
+        {% for item in data %}
+            <div class="table-wrapper">
+                <table class="fl-table">
+                    
+                    <thead>
+                        <tr>
+                            <th>Kitap Adı</th>
+                            <th>Yazar</th>
+                            <th>Görsel</th>
+                            <th>Sayfa</th>
+                        </tr>
+                    </thead>
+                    
+                    <tbody>
+                        <tr>
+                            <td>{{item[0]}}</td>
+                            <td>{{item[1]}}</td>
+                            <td><img alt="görüntü"></td>
+                            <td><form action="" class ="selectedBooks" method="POST"><button type="submit" class="buttonStyle" name ="downloadBook" value = {{item[3]}} >Sayfaya Git</button></form></td>
+                        </tr>
+                    </tbody>
+                    
+                </table>
+            </div>
+            
+        {% endfor %}
+        </center>
+    </section>
+    </body>
+</html>

@@ -1,0 +1,34 @@
+.content_table{
+    border-collapse: collapse;
+    margin: 30px 0;
+    font-size: 1.2em;
+    min-width: 500px;
+    border-radius: 5px 5px 0 0;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(16, 209, 220, 0.02);;
+}
+
+.content_table thead tr {
+    background-color: rgb(186, 245, 248);
+    text-align: center;
+    font-weight: bold;
+}
+
+.content_table th,
+.content_table td{
+    padding: 12px 15x;
+}
+
+.content_table tbody tr{
+    border-bottom: 1px solid #dddddd;
+}
+
+.content_table tbody tr:nth-of-type(even){
+    background-color: rgb(186, 208, 248);
+}
+.content_table tbody tr:nth-of-type(odd){
+    background-color: rgb(241, 154, 154);
+}
+.content_table tbody tr:last-of-type{
+    border-bottom: 2px solid rgb(235, 68, 26);
+}

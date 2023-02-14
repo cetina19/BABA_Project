@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-  
+        scale=1">
+        <link rel="stylesheet" 
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-
+        awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="/static/styles/selectedBook.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    </head>
+    <body>
+        <section>
+            <nav>
+                <div class="logo">
+                    <img alt="arkaplan">
+                </div>
+
+                <ul>
+                    <li><a href="/search">Aramaya Geri Dön</a></li>
+                    <li><a href="/">Ana Sayfaya Geri Dön</a></li>
+                </ul>
+
+                <div class="social_icon">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <i class="fa-solid fa-heart"></i>
+                </div>
+            </nav>
+
+            <div class="main">
+                <div class="main_tag">
+                    {% for item in data %}
+                        <h1>{{item[0]}}<br> <span>Yazar Adı = {{item[1]}}</span> </h1>
+                    {% endfor %}
+                    
+                    
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis nec laoreet magna. Vestibulum eu consectetur ex.
+                         In ac consequat purus. Vestibulum pulvinar fringilla dolor, et facilisis sapien efficitur commodo. 
+                         Fusce euismod, nisi et accumsan rutrum, magna ipsum efficitur odio, nec sodales libero purus eu augue. 
+                         Proin suscipit hendrerit nibh, sit amet gravida purus vulputate ac.
+                         Nunc bibendum dui erat, et tincidunt est sollicitudin in.
+                    </p>
+                    <form class="example" method="post" action="" style="margin:auto;max-width:600px">
+                            
+                                <button type="submit" class="main_btn">İndir</button>
+                            
+                    </form>
+                        
+                    <!--<a href="#" class="main_btn">Daha Fazlası İçin Tıkla</a>-->
+                </div>
+
+                <div class="main_img">
+                    <img alt="arkaplan2">
+                </div>
+            </div>
+        </section>
+
+        <div class="services">
+            <div class="services_box">
+                <div class="services_card">
+                    <i class="fa-solid fa-headset"></i>
+                    <h3>Dip Not</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis nec laoreet magna. Vestibulum eu consectetur ex.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="about">
+            <div class="about_image">
+                <img alt="arkaplan">
+            </div>
+            <div class="about_tag">
+                <h1>Bizim Hakkımızda</h1>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis nec laoreet magna. Vestibulum eu consectetur ex.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis nec laoreet magna. Vestibulum eu consectetur ex.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis nec laoreet magna. Vestibulum eu consectetur ex.
+                </p>
+                <a href="/" class="about_btn">Daha Fazlası</a>
+            </div>
+        </div>
+        <!-- <h1><center>Library</center></h1>
+        <form class="example" method="post" action="" style="margin:auto;max-width:600px">
+            <input type="text" placeholder="Search by author or book, or all to see all the data" name="book"> 
+            <center>
+                {% for item in data %}
+                    <div >Book Name = {{item[0]}} <br> Author = {{item[1]}}</div>
+                    <button type="submit" class="selectedBooks"><p>Indir</p></button>
+                {% endfor %}
+            </center>
+            
+        </form>
+        <p></p>
+        <center>
+        </center>-->
+    </body>
+</html>

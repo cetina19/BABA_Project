@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Digital Library</title>
+        <h1 id="headH1">Beni Anla Bana Anlat</h1>
+        <!-- <link rel="stylesheet" href="/templates/index_style.css"> -->
+        <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='/styles/login.css') }}">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css">
+    </head>
+    <body>
+        <!-- <script src="login.js"></script> -->
+        <div class="wrapper">
+        
+            <form method='POST' action="">
+                <h1>Login</h1>
+                <div class="Username">
+                    <input type="text" placeholder="Enter First Name" name="name" minlength="5" maxlength="20" required id="Username"/>
+                    
+                </div>
+                <div class="Username">
+                    <input type="text" placeholder="Enter Surname" name="surname" minlength="5" maxlength="20" required id="Lastname"/>
+                    
+                </div>
+                <div class="Password">
+                    <input type="password" placeholder="Enter Password" name="password" minlength="8" maxlength="20" required id="UserPassword"/>
+                    
+                </div>
+                <!-- <input type="submit"> -->
+                <button id="SubmitButton" type="submit">Login</button>
+            </form>
+        </div>
+    </body>
+</html>

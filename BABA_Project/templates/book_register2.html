@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Digital Library</title>
+        <h1 id="headH1">Beni Anla Bana Anlat</h1>
+        <!-- <link rel="stylesheet" href="/templates/index_style.css"> -->
+        <!-- <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='/styles/login.css') }}"> -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css">
+
+        <!-- <script src="book_register.js"></script> -->
+    </head>
+    <body>
+        
+        <div class="wrapper">
+            <form class="", method='POST', enctype="multipart/form-data", id='Upload'>
+                <input type="text" placeholder="Enter Author Name" name="author" minlength="1" maxlength="20" required id="Author"/>
+                {{  form.hidden_tag()  }}
+                {{  form.csrf_token }}
+                {{  form.file()  }}
+                {{  form.submit()  }}
+                <submit name="form2"/> 
+                <!-- <input type="submit" class="sm" value="button1" name="Submit"/> -->
+            </form>
+            <br>
+            <br>
+
+            <form class="", method='POST' name="Download">
+                {{  form.download()  }}
+                <submit name="form2"/> 
+                <!-- <submit name="form2"/> 
+                <input type="submit" class="sm" value="button1" name="Submit"/> -->
+            </form>
+        </div>
+
+        <!-- <button id='Hide_Show' type="submit" >Hide Upload</button> -->
+    </body>
+</html>

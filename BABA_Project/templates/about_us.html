@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Josefin+Sans"/>
+        <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='/styles/about_us.css') }}">
+        <title>About Us Page</title>
+        <script>
+            function memberPage(){
+                var next = document.getElementById('buttonMember');
+                var previous = document.getElementById('buttonAdmin');
+                previous.value = "Unclicked";
+                next.value = "Clicked";
+            }
+            function adminPage(){
+                var next = document.getElementById('buttonAdmin');
+                var previous = document.getElementById('buttonMember');
+                previous.value = "Unclicked";
+                next.value = "Clicked";
+            }
+        </script>
+    </head>
+    <body>
+        <section class="about">
+            <div class="main">
+                    <img src=static/styles/library.jfif>
+                
+                <div class="about-text">
+                    <h1>Hakkımızda</h1>
+                    <h5>Yaptıklarımız <span> & Yapacaklarımız</span></h5>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                        Proin in volutpat nulla. Aliquam erat volutpat. 
+                        Ut sit amet ultricies urna. Vivamus ac iaculis velit, vitae aliquam justo. 
+                        Proin ipsum ex, scelerisque ac pretium vel, tincidunt eget felis. 
+                        Proin at accumsan dui, sed scelerisque ante. Etiam sapien urna, pellentesque vitae sapien eu, 
+                        ultrices iaculis orci. Nullam iaculis maximus elit id posuere.
+                         Proin maximus felis ut urna semper, sit amet hendrerit arcu egestas.
+
+                        Nunc lacinia placerat malesuada. Praesent quam orci, pharetra sit amet nunc vel, 
+                        tristique tincidunt magna. 
+                        Nullam vitae leo id orci eleifend viverra vel at quam. 
+                        Proin urna tellus, malesuada quis mi in, maximus iaculis ipsum. 
+                        Nam auctor nisi sed ipsum convallis, quis ornare ligula semper. 
+                        Etiam rhoncus aliquet mi sit amet convallis. 
+                        Vestibulum accumsan orci eu ligula pharetra, ut fringilla erat posuere. 
+                        Integer luctus tortor tincidunt sem scelerisque, eget placerat sapien euismod. 
+                        Pellentesque blandit nulla ac augue placerat, id feugiat urna convallis.</p>
+                
+                <form method='POST' action="">
+                    <button id="buttonMember" name="buttonMember" type="submit" value="Unclicked" onclick="memberPage()" >Member</button>
+                    <button id="buttonAdmin" name="buttonAdmin" type="submit" value="Unclicked" onclick="adminPage()">Admin</button>
+                </form>
+                </div>
+            </div>
+        </section>
+        
+    </body>
+</html>

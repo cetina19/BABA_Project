@@ -1,0 +1,119 @@
+@import url('http://fonts.cdnfonts.com/css/montserrat');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Montserrat",sans-serif;
+    background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(trio-2.jfif);
+    /*background-size: cover;*/
+    /*background-position: center;*/
+}
+
+#headH1{
+    color: #bbf3c2;
+    position: relative;
+    text-align: center;
+    vertical-align: bottom;
+    top: 75px;
+}
+
+.Username,
+.Password,
+.Email{
+    position: relative;
+}
+
+.fa-envelope,
+.fa-lock-open,
+.fa-user{
+    position: absolute;
+    left: -5px;
+    top: 20px;
+    color:rgb(238, 164, 164);
+}
+
+.box{
+    border-radius: 20px;
+    width: 300px;
+    padding: 30px;
+    /*border: 2px solid orangered;*/
+    background-color: rgba(0, 0, 0, 0.4);
+    box-shadow: 1px 1px 2px #ffc400ef;
+    display: flex;
+    flex-direction: column;
+}
+
+.box h1{
+    color: #fff;
+}
+
+.wrapper{
+    /*border: 2px solid orangered;
+    border: 2px solid #aaaadd;*/
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    box-shadow: #ffc400ef;
+}
+
+.wrapper input[type="text"],
+.wrapper input[type="email"],
+.wrapper input[type="password"]{
+    font-size: 20px;
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 3px solid #ffc400ef;
+    padding: 14px 10px;
+    width: 175px;
+    outline: none;
+    color: rgb(241, 42, 42);
+    border-radius: 24px;
+    transition: all .2s ease-in;
+}
+
+.wrapper input[type="text"]:focus,
+.wrapper input[type="email"]:focus,
+.wrapper input[type="password"]:focus{
+    width: 200px;
+    border-color: #aaaadd;
+}
+
+
+.wrapper h1{
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 700;
+    align-self: center;
+    text-align: center;
+}
+
+.wrapper h4{
+    color: #ffa;
+}
+
+#SubmitButton{
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 3px solid #aaaadd;
+    padding: 14px 35px;
+    font-size: 18px;
+    color: #fff;
+    border-radius: 20px;
+    transition: all .2s ease-in-out;
+    cursor: pointer;
+}
+
+#SubmitButton:hover{
+    background-color: #9d9d9e;
+}

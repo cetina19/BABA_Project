@@ -1,0 +1,24 @@
+https://www.youtube.com/watch?v=6L3HNyXEais     //5. dakika
+
+mysql = MySQL(app)
+
+with app.app_context():
+    cursor = mysql.connection.cursor()
+
+cursor.execute('''INSERT INTO books(book_id, book_name, publishment_date, book_contents, publisher, authors) values('1', 'Medea', '2014-7-23', 'Ancient Greek Tragedy', 'Simon Schuster', 'Euripides');''')
+"update authors inner join books on authors.name_surname = books.authors set authors.book_count = (Select Count(*) from books where authors.name_surname=books.authors);"
+
+mysql.connection.commit()
+
+cursor.close()
+
+#cursor = mysql.connection.cursor()
+
+'''try:
+    #cursor.execute(INSERT INTO books(book_id, book_name, publishment_date, book_contents, publisher, authors) values('1', 'Medea', '2014-7-23', 'Ancient Greek Tragedy', 'Simon Schuster', 'Euripides');)
+    #cursor.execute('SELECT * FROM users WHERE `email` = %s', (email))
+    results = cursor.fetchall()
+    cursor.close()
+except Exception:
+    print('Error: unable to fetch items')
+    cursor.close()'''
